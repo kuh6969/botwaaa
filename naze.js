@@ -1888,7 +1888,7 @@ ${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Obje
 	    break
 	case 'menfes': case 'menfess': {
 		        if (m.isGroup) throw ('fitur tidak dapat digunakan di grup')
-            	if (!text) throw `Example : ${prefix + command} 6282xxxxx|nama samaran|pesan`
+            	if (!text) throw `Example : ${prefix + command} 628xxxxx|nama samaran|pesan`
             var mon = args.join(' ')
             var m1 = mon.split("|")[0]
             var m2 = mon.split("|")[1]
@@ -1901,6 +1901,44 @@ ${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Obje
                let ments = [mq1, ownernya, me]
                let pjtxt = `Pesan Dari : ${m2} \nUntuk : @${mq1.split('@')[0]}\n\n${m3}`
                let buttons = [{ buttonId: 'hehehe', buttonText: { displayText: '❤LIKE' }, type: 1 }]
+            await naze.sendButtonText(m1 + '@s.whatsapp.net', buttons, pjtxt, kawk, m, {mentions: ments, quoted: kafloc})
+            let akhji = `Pesan Telah Terkirim\nKe @${mq1.split('@')[0]}`
+            await naze.sendButtonText(m.chat, buttons, akhji, nyoutube, m, {mentions: ments})
+            }
+            break
+case 'trxgame': {
+		        if (m.isGroup) throw ('fitur tidak dapat digunakan di grup')
+            	if (!text) throw `Example : ${prefix + command} 6282xxxxx|pesan`
+            var mon = args.join(' ')
+            var m1 = mon.split("|")[0]
+            var m2 = mon.split("|")[1]
+               let kafloc = {key : {participant : '0@s.whatsapp.net', ...(m.chat ? { remoteJid: `status@broadcast` } : {}) },message: {locationMessage: {name: `${author}`,jpegThumbnail: thumb}}}
+               let mq1 = m1 + '@s.whatsapp.net'
+               let kawk = ('PESAN TRANSAKSI OTOMATIS BY KUHXD BOT')
+               let ownernya = ownernomer + '@s.whatsapp.net'
+               let me = m.sender
+               let ments = [mq1, ownernya, me]
+               let pjtxt = `Halo @${mq1.split('@')[0]}\nBerikut Detail Transaksi Kamu\n\n{m2}`
+               let buttons = [{ buttonId: 'hehehe', buttonText: { displayText: 'LIKE' }, type: 1 }]
+            await naze.sendButtonText(m1 + '@s.whatsapp.net', buttons, pjtxt, kawk, m, {mentions: ments, quoted: kafloc})
+            let akhji = `Pesan Telah Terkirim\nKe @${mq1.split('@')[0]}`
+            await naze.sendButtonText(m.chat, buttons, akhji, nyoutube, m, {mentions: ments})
+            }
+            break
+case 'trxdebt': {
+		        if (m.isGroup) throw ('fitur tidak dapat digunakan di grup')
+            	if (!text) throw `Example : ${prefix + command} 6282xxxxx|pesan`
+            var mon = args.join(' ')
+            var m1 = mon.split("|")[0]
+            var m2 = mon.split("|")[1]
+               let kafloc = {key : {participant : '0@s.whatsapp.net', ...(m.chat ? { remoteJid: `status@broadcast` } : {}) },message: {locationMessage: {name: `${author}`,jpegThumbnail: thumb}}}
+               let mq1 = m1 + '@s.whatsapp.net'
+               let kawk = ('PESAN PENGINGAT OTOMATIS BY KUHXD BOT')
+               let ownernya = ownernomer + '@s.whatsapp.net'
+               let me = m.sender
+               let ments = [mq1, ownernya, me]
+               let pjtxt = `Halo @${mq1.split('@')[0]}\nYuk Bayar Hutang\n\n{m2}`
+               let buttons = [{ buttonId: 'hehehe', buttonText: { displayText: 'LIKE' }, type: 1 }]
             await naze.sendButtonText(m1 + '@s.whatsapp.net', buttons, pjtxt, kawk, m, {mentions: ments, quoted: kafloc})
             let akhji = `Pesan Telah Terkirim\nKe @${mq1.split('@')[0]}`
             await naze.sendButtonText(m.chat, buttons, akhji, nyoutube, m, {mentions: ments})
